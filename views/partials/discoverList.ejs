@@ -1,0 +1,5 @@
+<div id="people">
+    <% data.forEach(function(user){ %>
+        <div id="user"><strong>Username: </strong><%= user.usrname %>  <strong>Name: </strong><%= user.name %> <button class="button3" id="add-friend" name=<%= user._id %>>Add</button></div>
+    <% }); %> 
+</div><br><br><br>

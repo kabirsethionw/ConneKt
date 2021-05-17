@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <script src="https://code.jquery.com/jquery-1.12.4.js" 
+			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" 
+			crossorigin="anonymous">
+		</script>
+        <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <title>Example</title>
+    </head>
+    <body>
+        <script id="Listener" src="./formlistener.js" type="text/javascript"></script>
+        <header>
+            <div class="geeks">
+                <h2 class="logo">conne<strong style="color: #ff0066;">K</strong>t</h2>
+            </div>
+
+            <div class="side-nav" id="side-nav" style="color: whitesmoke; font-weight: bold;" >
+                <h1 style="position: relative; bottom: 20%; left:85%" onclick="closeNav()">&times</h1>
+                <div class="profile-info">User Profile info here</div>
+                <hr>
+                <div class="friend">Friend1</div>
+                <div class="friend">Friend2</div>
+                <div class="friend">Friend3</div>
+            </div>
+
+            <div style="display: flex;">
+            <div class="slider-nav-button" id="slider-nav-button" onclick="openNav()">
+                <div class="stick1"></div>
+                <div class="stick2"></div>
+                <div class="stick3"></div>
+            </div>
+            <div class="greet">Welcome! <%= usrname %> <button id="logout" class="button2">Logout</button></div>
+        </div>
+        </header>
+        <main> 
+            
+            <h1 class="message">Discover</h1> <button id="discover">Discover</button>
+            <br><br><br>
+            
+            <%- include('./partials/discoverList.ejs') %>
+
+        </main>
+        <br>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="foot3r">
+            <span>
+            </span> 
+            <div class="foot3r_elem">
+                <div class="square"></div><strong style="color: #6600ff;"><big> Also available on</big></strong><br>
+                <strong>LinkedIn: </strong> <br>
+                <strong>GitHub: </strong>
+                <br>
+            </div>
+            
+            <div class="foot3r_last" >
+                <div class="square"></div>
+                <strong style="color: #6600ff;"><big>Social </big></strong><br>
+                <strong>Instagram: </strong> <br>
+                <strong>FaceBook: </strong>
+                <br></div>
+        </div>
+
+        <script>
+             function openNav() {
+                 document.getElementById("side-nav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("side-nav").style.width = "0px";
+            }
+        </script>
+    </body>
+</html>
